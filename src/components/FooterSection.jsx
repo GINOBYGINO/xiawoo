@@ -1,26 +1,10 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { MessageCircle, ExternalLink } from 'lucide-react'
 import SectionBackground from './SectionBackground'
 import RegisterButton from './RegisterButton'
-
-/** 報名表單連結 — 之後換成你的 Google 表單網址 */
-const REGISTER_FORM_URL = '#register-form'
-
-/** Discord 邀請連結 — 尚未開放時保持空字串 */
-const DISCORD_URL = ''
+import { REGISTER_FORM_URL, DISCORD_URL } from '../config'
 
 export default function FooterSection() {
-  const [shake, setShake] = useState(false)
-
-  const handleDiscordClick = (e) => {
-    if (!DISCORD_URL) {
-      e.preventDefault()
-      setShake(true)
-      setTimeout(() => setShake(false), 500)
-    }
-  }
-
   return (
     <section
       id="register"
@@ -73,31 +57,17 @@ export default function FooterSection() {
           </RegisterButton>
 
           <motion.a
-            href={DISCORD_URL || '#'}
-            onClick={handleDiscordClick}
-            animate={shake ? { x: [-8, 8, -6, 6, -3, 3, 0] } : { x: 0 }}
-            transition={{ duration: 0.45 }}
-            className={`inline-flex min-w-[160px] items-center justify-center gap-2 rounded-full border px-8 py-3.5 text-base font-bold tracking-wide transition ${
-              DISCORD_URL
-                ? 'border-[#5865F2] bg-[#5865F2]/20 text-white hover:bg-[#5865F2]/40'
-                : 'cursor-not-allowed border-white/15 bg-white/5 text-white/40'
-            }`}
+            href={DISCORD_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            className="inline-flex min-w-[160px] items-center justify-center gap-2 rounded-full border border-[#5865F2] bg-[#5865F2]/20 px-8 py-3.5 text-base font-bold tracking-wide text-white transition hover:bg-[#5865F2]/40"
           >
             <MessageCircle size={18} />
-            {DISCORD_URL ? '加入 Discord' : 'Discord 即將開放'}
+            加入 Discord
           </motion.a>
         </motion.div>
-
-        {!DISCORD_URL && (
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="mt-4 text-xs text-white/30"
-          >
-            Discord 連結尚未公布，請稍後再回來查看
-          </motion.p>
-        )}
 
         <footer className="mt-20 border-t border-white/10 pt-8">
           <p className="text-sm text-white/40">

@@ -6,9 +6,14 @@ export default function RegisterButton({
   className = '',
   children = '現在報名',
 }) {
+  const isExternal = /^https?:\/\//.test(href)
+
   return (
     <motion.a
       href={href}
+      {...(isExternal
+        ? { target: '_blank', rel: 'noopener noreferrer' }
+        : {})}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.97 }}
       className={cn(

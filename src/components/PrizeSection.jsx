@@ -6,7 +6,7 @@ import SectionBackground from './SectionBackground'
 const prizes = [
   {
     place: '冠軍',
-    amount: '800',
+    amount: '600',
     icon: Trophy,
     accent: true,
     delay: 0.1,
@@ -19,7 +19,7 @@ const prizes = [
     delay: 0.2,
   },
   {
-    place: '季殿軍',
+    place: '季軍',
     amount: '200',
     icon: Award,
     accent: false,
@@ -52,7 +52,7 @@ export default function PrizeSection() {
             className="text-3xl font-black md:text-5xl"
           >
             總獎金{' '}
-            <span className="text-mc-accent text-glow">1,600</span> 元
+            <span className="text-mc-accent text-glow">1,200</span> 元
           </motion.h2>
         </div>
 

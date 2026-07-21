@@ -16,9 +16,9 @@ const events = [
     icon: Clock,
   },
   {
-    date: '8 / 1 下午',
+    date: '8 / 1 19:30',
     title: '比賽正式開始',
-    desc: '九關挑戰開跑，登頂者為王',
+    desc: '下午 7:30 起，九關挑戰開跑，登頂者為王',
     icon: Flag,
   },
 ]

@@ -3,6 +3,7 @@ import { ChevronDown } from 'lucide-react'
 import GlitchText from '../ui/GlitchText'
 import SectionBackground from './SectionBackground'
 import RegisterButton from './RegisterButton'
+import { REGISTER_FORM_URL, REGISTRATION_COUNT } from '../config'
 
 export default function HeroSection() {
   return (
@@ -42,9 +43,20 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="mb-10 text-xl font-medium text-mc-glow text-glow md:text-3xl"
+          className="mb-4 text-xl font-medium text-mc-glow text-glow md:text-3xl"
         >
           首屆公開賽
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.55 }}
+          className="mb-10 text-base text-white/70 md:text-lg"
+        >
+          目前{' '}
+          <span className="font-bold text-mc-accent">{REGISTRATION_COUNT}</span>{' '}
+          名玩家已報名
         </motion.p>
 
         <motion.div
@@ -53,7 +65,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.65 }}
           className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
         >
-          <RegisterButton href="#register" />
+          <RegisterButton href={REGISTER_FORM_URL} />
           <a
             href="#about"
             className="rounded-full border border-white/20 px-8 py-3.5 text-sm font-medium text-white/80 transition hover:border-white/40 hover:text-white"

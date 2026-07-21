@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import FadeUpText from '../ui/FadeUpText'
 import SectionBackground from './SectionBackground'
+import { REGISTRATION_COUNT } from '../config'
 
 export default function AboutSection() {
   const ref = useRef(null)
@@ -33,7 +34,7 @@ export default function AboutSection() {
 
         <FadeUpText
           as="h2"
-          text="超過 N 名玩家將在 9 個大關中比賽，誰將成為第一位登上山頂的選手"
+          text={`超過 ${REGISTRATION_COUNT} 名玩家將在 9 個大關中比賽，誰將成為第一位登上山頂的選手`}
           className="text-2xl font-bold leading-relaxed text-white md:text-4xl lg:text-5xl lg:leading-snug"
         />
 
