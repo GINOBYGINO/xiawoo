@@ -10,9 +10,9 @@ const events = [
     icon: CalendarDays,
   },
   {
-    date: '8 / 1',
+    date: '8 / 1 18:00',
     title: '報名截止',
-    desc: '截止當日不再接受新報名',
+    desc: '截止不再接受新報名',
     icon: Clock,
   },
   {
@@ -47,7 +47,7 @@ export default function ScheduleSection() {
             viewport={{ once: true }}
             className="text-3xl font-black md:text-5xl"
           >
-            戰鬥時程
+            時程表
           </motion.h2>
         </div>
 
