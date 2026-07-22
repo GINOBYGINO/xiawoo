@@ -10,13 +10,13 @@ const events = [
     icon: CalendarDays,
   },
   {
-    date: '8 / 1 18:00',
+    date: '8 / 2 18:00',
     title: '報名截止',
     desc: '截止不再接受新報名',
     icon: Clock,
   },
   {
-    date: '8 / 1 19:30',
+    date: '8 / 2 19:30',
     title: '比賽正式開始',
     desc: '下午 7:30 起，九關挑戰開跑，登頂者為王',
     icon: Flag,
