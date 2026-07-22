@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
-import { MessageCircle, ExternalLink } from 'lucide-react'
+import { MessageCircle, ExternalLink, Instagram } from 'lucide-react'
 import SectionBackground from './SectionBackground'
 import RegisterButton from './RegisterButton'
-import { REGISTER_FORM_URL, DISCORD_URL } from '../config'
+import { REGISTER_FORM_URL, DISCORD_URL, INSTAGRAM_URL } from '../config'
 
 export default function FooterSection() {
   return (
@@ -46,7 +46,7 @@ export default function FooterSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.25 }}
-          className="flex flex-col items-center justify-center gap-4 sm:flex-row"
+          className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap"
         >
           <RegisterButton
             href={REGISTER_FORM_URL}
@@ -66,6 +66,18 @@ export default function FooterSection() {
           >
             <MessageCircle size={18} />
             加入 Discord
+          </motion.a>
+
+          <motion.a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            className="inline-flex min-w-[160px] items-center justify-center gap-2 rounded-full border border-pink-500/50 bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-orange-400/20 px-8 py-3.5 text-base font-bold tracking-wide text-white transition hover:from-purple-500/35 hover:via-pink-500/35 hover:to-orange-400/35"
+          >
+            <Instagram size={18} />
+            小窩 IG
           </motion.a>
         </motion.div>
 

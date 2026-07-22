@@ -6,21 +6,21 @@ import SectionBackground from './SectionBackground'
 const prizes = [
   {
     place: '冠軍',
-    amount: '600',
+    amount: '900',
     icon: Trophy,
     accent: true,
     delay: 0.1,
   },
   {
     place: '亞軍',
-    amount: '400',
+    amount: '600',
     icon: Medal,
     accent: false,
     delay: 0.2,
   },
   {
     place: '季軍',
-    amount: '200',
+    amount: '300',
     icon: Award,
     accent: false,
     delay: 0.3,
@@ -52,7 +52,7 @@ export default function PrizeSection() {
             className="text-3xl font-black md:text-5xl"
           >
             總獎金{' '}
-            <span className="text-mc-accent text-glow">1,200</span> 元
+            <span className="text-mc-accent text-glow">1,800</span> 元
           </motion.h2>
         </div>
 
@@ -82,8 +82,8 @@ export default function PrizeSection() {
             <div className="flex w-max animate-marquee whitespace-nowrap">
               {[0, 1].map((i) => (
                 <p key={i} className="px-8 text-base font-medium text-white/90 md:text-lg">
-                  若參賽者超過 40 位，再從剩餘參加者中抽出{' '}
-                  <span className="font-bold text-mc-glow">5 張 7-11 100 元禮券</span>
+                  若參賽者超過 40 位，再從沒有名次的參加者中抽出{' '}
+                  <span className="font-bold text-mc-glow">6 張 7-11 100 元禮券</span>
                   {'　·　'}
                 </p>
               ))}
