@@ -1,8 +1,28 @@
 import { motion } from 'framer-motion'
-import { MessageCircle, ExternalLink, Instagram } from 'lucide-react'
+import { MessageCircle, ExternalLink } from 'lucide-react'
 import SectionBackground from './SectionBackground'
 import RegisterButton from './RegisterButton'
 import { REGISTER_FORM_URL, DISCORD_URL, INSTAGRAM_URL } from '../config'
+
+function InstagramIcon({ size = 18 }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  )
+}
 
 export default function FooterSection() {
   return (
@@ -76,7 +96,7 @@ export default function FooterSection() {
             whileTap={{ scale: 0.97 }}
             className="inline-flex min-w-[160px] items-center justify-center gap-2 rounded-full border border-pink-500/50 bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-orange-400/20 px-8 py-3.5 text-base font-bold tracking-wide text-white transition hover:from-purple-500/35 hover:via-pink-500/35 hover:to-orange-400/35"
           >
-            <Instagram size={18} />
+            <InstagramIcon size={18} />
             小窩 IG
           </motion.a>
         </motion.div>
