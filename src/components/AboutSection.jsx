@@ -34,7 +34,7 @@ export default function AboutSection() {
 
         <FadeUpText
           as="h2"
-          text={`超過 ${REGISTRATION_COUNT} 名玩家將在 9 個大關中比賽，誰將成為第一位登上山頂的選手`}
+          text={`超過 ${REGISTRATION_COUNT} 名玩家將在 9 個賽道中比賽，誰將成為第一位登上山頂的選手`}
           className="text-2xl font-bold leading-relaxed text-white md:text-4xl lg:text-5xl lg:leading-snug"
         />
 
@@ -53,7 +53,7 @@ export default function AboutSection() {
           transition={{ delay: 0.5 }}
           className="mt-8 text-sm text-mc-muted md:text-base"
         >
-          九關連戰 · 登頂為王 · 只有一位冠軍
+          九個賽道 · 登頂為王 · 只有一位冠軍
         </motion.p>
       </div>
     </section>
